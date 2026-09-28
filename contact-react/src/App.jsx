@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./components/Login";
 import Admin from "./components/Admin";
+import FileUpload from "./components/FileUpload";
 
 function ProtectedRoute({ children }) {
   const token = localStorage.getItem("jwt_token");
@@ -18,9 +19,16 @@ function App() {
       <Routes>
 
         {/* Login Page */}
-        <Route path="/login" element={<Login onLogin={() => {
-          window.location.href = "/";
-        }} />} />
+        <Route
+          path="/login"
+          element={
+            <Login
+              onLogin={() => {
+                window.location.href = "/";
+              }}
+            />
+          }
+        />
 
         {/* Protected Admin Page */}
         <Route
@@ -32,8 +40,21 @@ function App() {
           }
         />
 
+        {/* Protected File Upload Page */}
+        <Route
+          path="/upload"
+          element={
+            <ProtectedRoute>
+              <FileUpload />
+            </ProtectedRoute>
+          }
+        />
+
         {/* Any unknown URL */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route
+          path="*"
+          element={<Navigate to="/" replace />}
+        />
 
       </Routes>
     </BrowserRouter>

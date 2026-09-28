@@ -134,3 +134,182 @@
 
   font-size: 13px;
 }
+
+.register-option {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.register-link {
+  margin-left: 5px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Modern Login Page ===== */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #4f46e5);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 42px 38px;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  animation: loginCardAppear 0.5s ease;
+}
+
+.login-card h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-card > p {
+  margin: 8px 0 30px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.input-box {
+  margin-bottom: 20px;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.input-box input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1.5px solid #dbe2ea;
+  border-radius: 11px;
+  background: #f8fafc;
+  color: #1e293b;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.input-box input::placeholder {
+  color: #94a3b8;
+}
+
+.input-box input:focus {
+  border-color: #6366f1;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+.login-card form button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 13px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  color: white;
+  font-size: 15px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.login-card form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(79, 70, 229, 0.3);
+}
+
+.register-option {
+  margin-top: 22px;
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.register-link {
+  display: block;
+  width: 100%;
+  margin: 10px 0 0;
+  padding: 11px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  color: white;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.register-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.25);
+}
+
+.footer {
+  margin-top: 28px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 11px;
+  letter-spacing: 0.2px;
+}
+
+@keyframes loginCardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .login-page {
+    padding: 20px 15px;
+  }
+
+  .login-card {
+    padding: 32px 24px;
+    border-radius: 20px;
+  }
+
+  .login-card h1 {
+    font-size: 26px;
+  }
+}
